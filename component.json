@@ -1,0 +1,14 @@
+{
+  "name": "touch-menu",
+  "scripts": [
+    "index.js",
+    "lib/merge.js",
+    "lib/TouchSubMenu.js"
+  ],
+  "dependencies": {
+    "component/event": "0.1.3",
+    "component/emitter": "1.1.2"
+  },
+  "development": {
+  }
+}

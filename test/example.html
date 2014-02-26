@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Touch Menu Test</title>
+    <style>
+
+        .dropdown, .submenu > ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            background-color: #ccc;
+        }
+
+        .submenu > ul {
+            background-color: #aaa;
+        }
+
+        .dropdown > li {
+            display: inline-block;
+        }
+
+        .submenu > ul {
+            display: none;
+            position: absolute;
+        }
+
+        .no-touch .dropdown > li.submenu:hover > ul,
+        .dropdown > li.submenu > ul.hover  {
+            display: block;
+        }
+
+        .dropdown a, .submenu a {
+            display: block;
+            padding: 0.25em 1em;
+        }
+
+    </style>
+    <script>
+        if (!("ontouchstart" in document.documentElement)) {
+            document.documentElement.className += " no-touch";
+        }
+    </script>
+    <script src="../build/build.js"></script>
+</head>
+<body>
+
+    <ul class="primary_nav2 dropdown anti-alias">
+        <li class="submenu">
+            <a href="/Nib.Content.Web/health-insurance" id="ga-nav-health-insurance" class="nav-more">Health Insurance</a>
+            <ul>
+                <li><a id="ga-nav-hi-what" href="/Nib.Content.Web/health-insurance">What is health insurance?</a></li>
+                <li><a id="ga-nav-hi-compare-h" href="/Nib.HealthInsurance.Web/compare-hospital">Compare Hospital cover</a></li>
+                <li><a id="ga-nav-hi-compare-e" href="/Nib.HealthInsurance.Web/compare-extras">Compare Extras cover</a></li>
+                <li><a id="ga-nav-hi-singles" href="/Nib.Content.Web/health-insurance/singles">Singles Health Insurance</a></li>
+                <li><a id="ga-nav-hi-couples" href="/Nib.Content.Web/health-insurance/couples">Couples Health Insurance</a></li>
+                <li><a id="ga-nav-hi-families" href="/Nib.Content.Web/health-insurance/family">Family Health Insurance </a></li>
+            </ul>
+        </li>
+        <li><a id="ga-nav-life-insurance" href="http://ntlvmdms04.dev.online4.nib.com.au/life-insurance" title="">Life Insurance</a></li>
+        <li><a id="ga-nav-travel-insurance" href="http://ntlvmdms04.dev.online4.nib.com.au/travel-insurance" title="">Travel Insurance</a></li>
+        <li class="submenu">
+            <a id="ga-nav-overseas-customers" href="http://ntlvmdms04.dev.online4.nib.com.au/home/newtonib/overseasstudents/Pages/overseas_customers.aspx" title="" class="nav-more">Overseas Customers</a>
+            <ul>
+                <li><a id="ga-nav-overseas-students" href="http://ntlvmdms04.dev.online4.nib.com.au/home/newtonib/overseasstudents/Pages/overseasstudents.aspx" title="">Overseas Students</a></li>
+                <li><a id="ga-nav-overseas-visitors" href="http://ntlvmdms04.dev.online4.nib.com.au/home/newtonib/overseasstudents/Pages/overseas_visitors.aspx" title="">Overseas Visitors</a></li>
+                <li><a id="ga-nav-overseas-migrants" href="http://ntlvmdms04.dev.online4.nib.com.au/home/newtonib/whynib/Pages/PermanentResidents.aspx?=2" title="">Migrants</a></li>
+            </ul>
+        </li>
+        <li><a id="ga-nav-why-nib" href="http://ntlvmdms04.dev.online4.nib.com.au/whynib" title="">Why nib</a></li>
+        <li class="submenu">
+            <a id="ga-nav-join-nib" href="http://ntlvmdms04.dev.online4.nib.com.au/home/newtonib/join.aspx" title="" class="nav-more">Join nib</a>
+            <ul>
+                <li><a id="ga-nav-join-health-insurance" href="http://ntlvmdms04.dev.online4.nib.com.au/home/newtonib/join.aspx#" title="">Health Insurance</a></li>
+                <li><a id="ga-nav-join-life-insurance" href="http://ntlvmdms04.dev.online4.nib.com.au/life-insurance#" title="">Life Insurance</a></li>
+                <li><a id="ga-nav-join-travel-insurance" href="http://ntlvmdms04.dev.online4.nib.com.au/travel-insurance#" title="">Travel Insurance</a></li>
+            </ul>
+        </li>
+        <li class="submenu">
+            <a id="ga-nav-existing-customers" href="http://ntlvmdms04.dev.online4.nib.com.au/home/onlineservices/Pages/Welcome.aspx" title="" class="nav-more">Existing Customers</a>
+            <ul>
+                <li><a id="ga-nav-customers-your-policy" href="http://ntlvmdms04.dev.online4.nib.com.au/home/onlineservices/yourpolicy/Pages/yourpolicy.aspx" title="">Your Policy</a></li>
+                <li><a id="ga-nav-customers-claiming" href="http://ntlvmdms04.dev.online4.nib.com.au/home/onlineservices/claiming/pages/claim.aspx" title="">Claiming</a></li>
+                <li><a id="ga-nav-customers-going-to-hospital" href="http://ntlvmdms04.dev.online4.nib.com.au/home/onlineservices/claiming/pages/goingtohospital.aspx" title="">Going to hospital</a></li>
+                <li><a id="ga-nav-customers-hospital-providers" href="http://ntlvmdms04.dev.online4.nib.com.au/home/onlineservices/claiming/Pages/providers.aspx" title="">Hospitals &amp; Providers</a></li>
+                <li><a id="ga-nav-customers-forms-brochures" href="http://ntlvmdms04.dev.online4.nib.com.au/home/onlineservices/forms/Pages/formsbrochures.aspx" title="">Forms and brochures</a></li>
+                <li><a id="ga-nav-customers-costs-baby" href="http://ntlvmdms04.dev.online4.nib.com.au/home/Pages/The_costs_of_having_a_baby.aspx" title="">Costs of Having a Baby</a></li>
+                <li><a id="ga-nav-customers-orthodontia" href="http://ntlvmdms04.dev.online4.nib.com.au/home/onlineservices/claiming/Pages/orthodontiabasics.aspx" title="">Orthodontia</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+
+        var TouchMenu = require('touch-menu');
+        new TouchMenu({
+            el: document.querySelector('.primary_nav2')
+        });
+
+    </script>
+
+</body>
+</html>
