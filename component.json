@@ -1,5 +1,5 @@
 {
-  "name": "touch-menu",
+  "name": "touch-dropdown",
   "scripts": [
     "index.js",
     "lib/merge.js",
