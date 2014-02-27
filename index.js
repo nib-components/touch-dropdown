@@ -71,25 +71,6 @@ function TouchMenu(options) {
 
   });
 
-  /*
-   * This is a hack to fix an issue on Android devices where the browser wrongly fires a click event on the wrong element
-   * without first sending touchstart and touchend events and resulting on the browser leaving the current page
-   * **this hack doesn't fully solve the problem
-   * **this hack does seem to make it a little less responsive
-   */
-  events.bind(this.el, 'touchstart', function(event) {
-    var triggerTouched = false;
-    for (var i=0; i<this.menus.length; ++i) {
-      if (event.target === this.menus[i].trigger) {
-        triggerTouched = true;
-        break;
-      }
-    }
-    if (!triggerTouched) {
-      event.preventDefault();
-    }
-  }.bind(this));
-
 }
 /**
  * Closes all menus except the specified menu
